@@ -1,0 +1,23 @@
+#!/bin/sh
+# Manuscript Harness - git pre-commit gate (Codex / cross-runtime port).
+#
+# The discipline lives in .codex/skills/*/SKILL.md; THIS is the enforcement
+# point on a runtime whose hooks cannot intercept file writes. It runs the
+# staged manuscripts through the checker:
+#   - a [FABRICATED] citation aborts the commit (exit non-zero);
+#   - reporting gaps are reported but never block (annotate only).
+#
+# Install by pointing git at this directory:
+#   git config core.hooksPath codex/hooks
+# (see codex/INSTALL.md). Override a single commit with: git commit --no-verify
+ROOT=$(git rev-parse --show-toplevel) || exit 0
+
+if command -v python3 >/dev/null 2>&1; then PY=python3
+elif command -v python  >/dev/null 2>&1; then PY=python
+elif command -v py      >/dev/null 2>&1; then PY=py
+else
+  echo "Manuscript Harness pre-commit: no python interpreter found - gate INACTIVE for this commit." >&2
+  exit 0
+fi
+
+exec "$PY" "$ROOT/codex/hooks/manuscript_precommit_check.py"

@@ -173,6 +173,20 @@ This is also why the portable Agent Skills standard carries the *discipline*
 across runtimes but leaves the *hook* runtime-specific: rules travel, enforcement
 is bolted down.
 
+### Other runtimes (Codex) — the same thesis, measured
+
+The SKILL.md *discipline* is the open Agent Skills standard, so it ports to Codex
+unchanged. The *enforcement* does not — and that is the point, not a defect.
+Codex's hooks currently intercept only the `Bash` tool, not `Write` / `Edit`, so
+there is no write-time gate to bolt to. The port (under [`codex/`](codex/), see
+[`codex/INSTALL.md`](codex/INSTALL.md)) therefore moves the brake to the next
+boundary a hook *can* reach: a **git `pre-commit` gate**. Same labels, same
+asymmetry — a `[FABRICATED]` citation **aborts the commit**, while reporting gaps
+are reported but never block. So the discipline travelled (same SKILL.md), and
+the enforcement re-bolted itself to a different runtime seam (write syscall →
+commit). That is *rules travel, enforcement is bolted to the runtime* — observed,
+not just asserted.
+
 ---
 
 ## Install
