@@ -9,6 +9,10 @@
 *.md   text eol=lf
 *.json text eol=lf
 *.txt  text eol=lf
+*.sh   text eol=lf
+
+# Windows batch files must keep CRLF endings to run reliably under cmd.exe.
+*.bat  text eol=crlf
 
 # Files with no extension (LICENSE) are text too.
 LICENSE text eol=lf

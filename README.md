@@ -215,6 +215,12 @@ The hooks read stdin as UTF-8 (`utf-8-sig`), so non-ASCII (e.g. Korean)
 manuscript content and a BOM injected by a Windows PowerShell pipe do not make
 them fail silently.
 
+**Per-paper helper.** Working one folder per paper? Run
+`scripts/new-paper.sh <folder>` (macOS / Linux) or
+`scripts\new-paper.bat <folder>` (Windows) to scaffold a fresh manuscript
+folder: it copies both skills into `<folder>/.claude/skills/` and drops a starter
+`manuscript.md`, so Claude Code started from that folder enforces immediately.
+
 ---
 
 ## Scope and honest boundaries (v1)

@@ -185,6 +185,11 @@ SKILL.md *규율*은 오픈 Agent Skills 표준이라 Codex로 그대로 옮겨�
 hook은 stdin을 UTF-8(`utf-8-sig`)로 읽으므로, 비-ASCII(예: 한글) 원고 내용이나 Windows
 PowerShell 파이프가 끼워넣는 BOM이 있어도 조용히 통과(fail-open)하지 않는다.
 
+**논문별 헬퍼.** 논문마다 폴더를 따로 둔다면, `scripts/new-paper.sh <폴더>`(macOS / Linux)
+또는 `scripts\new-paper.bat <폴더>`(Windows)로 새 원고 폴더를 한 번에 세팅한다 — 두 skill을
+`<폴더>/.claude/skills/`로 복사하고 시작용 `manuscript.md`를 만들어, 그 폴더에서 시작한
+Claude Code가 곱바로 강제한다.
+
 ---
 
 ## 범위와 정직한 경계 (v1)
