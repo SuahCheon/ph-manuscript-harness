@@ -40,9 +40,11 @@ if not exist "%TARGET%\manuscript.md" (
   > "%TARGET%\manuscript.md" echo # (new manuscript)
 )
 
+if not exist "%TARGET%\HOWTO.md" if exist "%~dp0paper-howto-template.md" copy /y "%~dp0paper-howto-template.md" "%TARGET%\HOWTO.md" >nul
+
 echo Manuscript Harness: set up "%TARGET%".
 echo   copied skills: citation-verifier, reporting-guidelines
-echo   created: manuscript.md (edit this)
+echo   created: manuscript.md (edit this), HOWTO.md (how to use this folder)
 echo.
 echo Next: open a terminal in "%TARGET%", start Claude Code there, then ask e.g.:
 echo   - verify the citations in manuscript.md with citation-verifier

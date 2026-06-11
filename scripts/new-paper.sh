@@ -38,9 +38,13 @@ if [ ! -e "$TARGET/manuscript.md" ]; then
   printf '# (new manuscript)\n' > "$TARGET/manuscript.md"
 fi
 
+if [ ! -e "$TARGET/HOWTO.md" ] && [ -e "$SCRIPT_DIR/paper-howto-template.md" ]; then
+  cp "$SCRIPT_DIR/paper-howto-template.md" "$TARGET/HOWTO.md"
+fi
+
 echo "Manuscript Harness: set up '$TARGET'."
 echo "  copied skills: citation-verifier, reporting-guidelines"
-echo "  created: manuscript.md (edit this)"
+echo "  created: manuscript.md (edit this), HOWTO.md (how to use this folder)"
 echo
 echo "Next: open a terminal in '$TARGET', start Claude Code there, then ask e.g.:"
 echo "  - verify the citations in manuscript.md with citation-verifier"
