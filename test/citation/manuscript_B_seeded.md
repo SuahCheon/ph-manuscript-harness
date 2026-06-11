@@ -1,0 +1,20 @@
+# A Neuro-Symbolic System for AEFI Surveillance (example manuscript)
+
+## Introduction
+
+The WHO AEFI causality classification provides the global standard
+[GREY-LIT-WHO]. Brighton Collaboration case definitions standardize reporting
+[GREY-LIT-WHO].
+
+A foundational neuro-symbolic study (Park et al., 2019, PMID 41234567) is cited
+here, but the PubMed record for that PMID reads "Park et al., 2021" — a
+year/record mismatch [FABRICATED]. A second reference (Lee et al., 2020, PMID
+99999999) returns no record at all on lookup [FABRICATED].
+
+## Methods
+
+A relevant 2026 preprint on AEFI signal detection could not be checked because
+the PubMed E-utilities endpoint timed out during the verification run
+[UNVERIFIED]. The KDCA pharmacovigilance guidance is cited as grey literature
+[GREY-LIT-KDCA]. The reproducibility result is properly verified
+[PMID-VERIFIED].
