@@ -1,5 +1,7 @@
 # Manuscript Harness
 
+*📖 English · [한국어](README.ko.md)*
+
 **The public-health manuscript harness — enforcement, not assistance.**
 
 Manuscript Harness is two Claude Code skills that hold a manuscript to a

@@ -1,0 +1,14 @@
+# Normalize line endings: store as LF in the repo and check out as LF on every
+# platform. This repo is cross-runtime (the hooks run on Windows, macOS, Linux),
+# so a single line-ending avoids CRLF/LF diff noise and keeps the Python hooks
+# byte-identical everywhere.
+* text=auto eol=lf
+
+# Be explicit for the file types that actually ship.
+*.py   text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.txt  text eol=lf
+
+# Files with no extension (LICENSE) are text too.
+LICENSE text eol=lf
